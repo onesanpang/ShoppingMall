@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="com.example.onesanpang.shoppingmall.FirstACtivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_above="@id/first_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/first_image_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="#ffffff"
+        android:id="@+id/first_linear"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <ImageView
+            android:src="@mipmap/icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="160dp"
+            android:layout_height="60dp">
+            <TextView
+                android:textSize="22dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:text="大米商城"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+            <TextView
+                android:gravity="center"
+                android:textSize="9dp"
+                android:text="让每个人都能享受到网购的乐趣"
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
